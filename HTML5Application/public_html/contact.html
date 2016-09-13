@@ -13,38 +13,48 @@ and open the template in the editor.
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
+
         <div class="container">
             <header class="page-header">
                 <h1>Bootstrap</h1>
             </header>
             <nav class="row">
-                <ul class="list-inline">
+                <ul class="nav nav-tabs">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a>Information</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li  class="active"><a href="contact.html">Contact</a></li>
 
                 </ul>
             </nav>
             <form>
-                <div class="form-group">
+                <div id="divName" class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" name="name" class="form-control" placeholder="name">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="name">
                 </div>
                 <div class="form-group">
                     <label for="surname">Surname</label>
-                    <input type="text" name="surname" class="form-control" placeholder="surname">
+                    <input type="text" name="surname" id="surname" class="form-control" placeholder="surname">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="email">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="email">
                 </div>
                 <div class="form-group">
-                    <input type="submit" name="send" class="form-control btn-info">
+                    <input type="submit" name="send" class="form-control btn-info" onclick="ClickButton();">
                 </div>
-
-
             </form>
         </div>
+        <script type="text/javascript">
+            function ClickButton() {
+                var Name = document.getElementById("name");
+                var DivName = document.getElementById("divName");
+                var Surname = document.getElementById("surname");
+                var Email = document.getElementById("email");
+                if (Name.value == "") {
+                    
 
+                }
+            }
+        </script>
     </body>
 </html>
